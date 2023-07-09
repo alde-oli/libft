@@ -18,6 +18,6 @@ char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, unsigned int nb);
-size_t  ft_strlcat(char *dest, const char *src, size_t n);
+size_t  ft_strlcat(char *dest, char *src, size_t n);
 
 #endif
