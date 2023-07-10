@@ -21,5 +21,9 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb);
 size_t  ft_strlcat(char *dest, const char *src, size_t n);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+char    *ft_strstr(char *h, char *n);
+char    *ft_strnstr(char *h, char *n, size_t n);
+int	    ft_strcmp(char *s1, char*s2);
+int	ft_strncmp(char *s1, char*s2, unsigned int nb);
 
 #endif
