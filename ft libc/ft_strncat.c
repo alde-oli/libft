@@ -5,7 +5,7 @@ void	ft_strncpymod(char *dest, char *src, unsigned int nb)
 	unsigned int	j;
 
 	j = 0;
-	while (src[j] != '\0' && j < nb)
+	while (src[j] && j < nb)
 	{
 		dest[j] = src[j];
 		j++;

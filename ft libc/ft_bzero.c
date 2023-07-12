@@ -2,14 +2,12 @@
 
 void    *ft_bzero(void *s, size_t n)
 {
-    unsigned int    i;
-    unsigned char   *loc;
+    int i;
 
-    loc = (unsigned char *) s;
     i = 0;
-    while (i < n)
+    while (i < (int)n)
     {
-        *(loc + i) = 0;
+        *((unsigned char *)s + i) = 0;
         i++;
     }
     return (s);

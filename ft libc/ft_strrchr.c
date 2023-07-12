@@ -9,6 +9,5 @@ char    *ft_strrchr(const char *s, int c)
         i--;
     if (s[i] == c)
         return ((char *)(s + i));
-    else
-        return (NULL);
+    return (NULL);
 }
