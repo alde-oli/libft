@@ -33,7 +33,7 @@ static int	ft_strclen(char const *s, int i, char c)
 
 static char	*ft_strccpy(char const *src, int *i, char c)
 {
-	int	j;
+	int	    j;
 	char	*dest;
 
 	j = 0;
@@ -53,9 +53,9 @@ static char	*ft_strccpy(char const *src, int *i, char c)
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**dest;
-	int	s_nbr;
-	int	i;
-	int	j;
+	int	    s_nbr;
+	int	    i;
+	int	    j;
 
 	i = 0;
 	j = 0;
@@ -75,23 +75,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	dest[j] = NULL;
 	return (dest);
-}
-
-#include <stdio.h>
-
-int main()
-{
-    char str[] = "zzcanardzzzzzZ,.Zebre\tZzzchevalzzzpzz";
-    char **sstr;
-    int i;
-
-    sstr = ft_strsplit(str, 'z');
-    i = 0;
-    while (sstr[i])
-    {
-        printf("%s\n", sstr[i]);
-        i++;
-    }
-
-    return 0;
 }
