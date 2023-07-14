@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	writenbr(int nb)
+void	writenbr_fd(int nb, int fd)
 {
 	char	digit;
 
@@ -10,13 +10,13 @@ void	writenbr(int nb)
 		digit = nb % 10 + 48;
 	nb /= 10;
 	if (nb != 0)
-		writenbr(nb);
-	write(1, &digit, 1);
+		writenbr_fd(nb, fd);
+	write(fd, &digit, 1);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb < 0)
-		write(1, "-", 1);
-	writenbr(nb);
+		write(fd, "-", 1);
+	writenbr_fd(nb, fd);
 }

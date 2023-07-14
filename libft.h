@@ -5,6 +5,13 @@
 # include <stdlib.h>
 # include <string.h>
 
+typedef struct  s_list
+{
+    void *content;
+    size_t content_size;
+    struct s_list *next;
+}   t_list;
+
 void    *ft_memset(void *s, int c, size_t n);
 void    *ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *dest, const void *src, size_t n);
@@ -53,5 +60,9 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *str);
 void    ft_putendl(char const *s);
 void	ft_putnbr(int nb);
+void    ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *str, int fd);
+void    ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 
 #endif
