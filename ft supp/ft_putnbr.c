@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	writenbr(int nb)
+static void	writenbr(int nb)
 {
 	char	digit;
 

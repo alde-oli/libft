@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	ft_strncpymod(char *dest, char *src, unsigned int nb)
+static void	ft_strncpymod(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	j;
 

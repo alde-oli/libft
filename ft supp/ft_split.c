@@ -18,39 +18,7 @@ static int	ft_strnbr(char const *s, char c)
 	return (s_nbr);
 }
 
-static int	ft_strclen(char const *s, int i, char c)
-{
-	int	j;
-
-	j = 0;
-	while (s[i] && s[i] != c)
-	{
-		i++;
-		j++;
-	}
-	return (j);
-}
-
-static char	*ft_strccpy(char const *src, int *i, char c)
-{
-	int	    j;
-	char	*dest;
-
-	j = 0;
-	dest = (char *)malloc(sizeof(char) * (ft_strclen(src, *i, c) + 1));
-	if (!dest)
-		return (NULL);
-	while (src[*i] && src[*i] != c)
-	{
-		dest[j] = src[*i];
-		j++;
-		(*i)++;
-	}
-	dest[j] = '\0';
-	return (dest);
-}
-
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**dest;
 	int	    s_nbr;
@@ -68,7 +36,7 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
         if (!s[i])
             break;
-		dest[j] = ft_strccpy(s, &i, c);
+		dest[j] = ft_strcdup(s, &i, c);
 		if (!dest[j])
 			return (NULL);
 		j++;
