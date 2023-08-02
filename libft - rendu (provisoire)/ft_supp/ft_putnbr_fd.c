@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static void	writenbr_fd(int nb, int fd)
 {

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 t_list *ft_lstcreate(int lstnb, void (*del)(void *))
 {

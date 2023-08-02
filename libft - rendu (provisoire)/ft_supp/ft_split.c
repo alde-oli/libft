@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static int	ft_strnbr(char const *s, char c)
 {

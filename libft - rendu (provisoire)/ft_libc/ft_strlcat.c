@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static void	ft_strncpymod(char *dest, char *src, unsigned int nb)
 {
