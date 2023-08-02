@@ -14,10 +14,10 @@ t_list *ft_lstcreate(int lstnb, void (*del)(void *))
         newlst = ft_lstnew(NULL);
         if (!newlst)
         {
-            ft_lstclear(newlst, del);
+            ft_lstclear(&newlst, del);
             return(NULL);
         }
-        ft_lstadd(lsttemp, newlst);
+        ft_lstadd_front(&lsttemp, newlst);
         lstnb--;
     }
     return(newlst);

@@ -15,5 +15,5 @@ int ft_lstsize(t_list *lst)
         return(lstnb);
     }
     else
-        return (NULL);
+        return (0);
 }

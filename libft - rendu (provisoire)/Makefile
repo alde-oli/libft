@@ -67,7 +67,7 @@ $(OBJS_DIR)ft_supp/%.o: ft_supp/%.c
 $(OBJS_DIR)ft_bonus/%.o: ft_bonus/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): $(OBJS_LIBC) $(OBJS_SUPP) $(OBJS_BONUS)
+$(NAME): $(OBJS_LIBC) $(OBJS_SUPP)
 	$(AR) $@ $^
 
 bonus: $(OBJS_BONUS)

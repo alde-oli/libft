@@ -2,7 +2,7 @@
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned int    i;
+    int    i;
     unsigned char   inter[256];
 
     i = -1;

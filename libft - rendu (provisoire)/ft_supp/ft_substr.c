@@ -6,8 +6,8 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char    *dest;
 
     i = 0;
-    if((start + len - 1) > ft_strlen(s))
-        len = ft_strlen(s);
+    if((start + len - 1) > (size_t)ft_strlen((char *)s))
+        len = ft_strlen((char *)s);
     dest = (char *) malloc(sizeof(char) * len + 1);
     if (!dest)
         return(NULL);
