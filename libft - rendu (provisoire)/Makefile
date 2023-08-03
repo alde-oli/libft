@@ -58,13 +58,13 @@ OBJS_LIBC = $(addprefix $(OBJS_DIR)ft_libc/, $(addsuffix .o, $(FILES_LIBC)))
 OBJS_SUPP = $(addprefix $(OBJS_DIR)ft_supp/, $(addsuffix .o, $(FILES_SUPP)))
 OBJS_BONUS = $(addprefix $(OBJS_DIR)ft_bonus/, $(addsuffix .o, $(FILES_BONUS)))
 
-$(OBJS_DIR)ft_libc/%.o: ft_libc/%.c
+ft_libc/%.o: ft_libc/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(OBJS_DIR)ft_supp/%.o: ft_supp/%.c
+ft_supp/%.o: ft_supp/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(OBJS_DIR)ft_bonus/%.o: ft_bonus/%.c
+ft_bonus/%.o: ft_bonus/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS_LIBC) $(OBJS_SUPP)
