@@ -1,13 +1,17 @@
 #include "../libft.h"
 
-char *ft_strnstr(char *h, char *n, size_t len)
+char    *ft_strnstr(const char *h, const char *n, size_t len)
 {
-    int i;
+    size_t i;
+    size_t n_len;
+
     i = 0;
-    while (h[i] && i < (int)len)
+    n_len = strlen((char *)n);
+
+    while (h[i] && i < len)
     {
-        if (!(ft_strncmp(h + i, n, ft_strlen(n))))
-            return (h + i);
+        if (!(ft_strncmp((char *)h + i, (char *)n, n_len)))
+            return ((char *)(h + i));
         i++;
     }
     return (NULL);
