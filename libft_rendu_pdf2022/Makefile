@@ -25,7 +25,9 @@ FILES_LIBC = ft_isalpha \
                          ft_memchr \
                          ft_memcmp \
                          ft_strnstr \
-                         ft_atoi
+                         ft_atoi \
+                         ft_calloc \
+                         ft_strdup
 
 FILES_SUPP = ft_substr \
                          ft_strjoin \

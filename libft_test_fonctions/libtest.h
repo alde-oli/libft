@@ -30,6 +30,8 @@ void    t_memchr(void);
 void    t_memcmp(void);
 void    t_strnstr(void);
 void	t_atoi(void);
+void    t_calloc(void);
+void    t_strdup(void);
 //fonctions supp
 void    t_substr(void);
 void    t_strjoin(void);

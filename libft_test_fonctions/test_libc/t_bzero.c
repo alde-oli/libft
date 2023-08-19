@@ -1,41 +1,42 @@
 #include "../libtest.h"
-//bzero might not be available due to being obsolete, if so use "memset(s, 0, n)" instead as it does the same thing.
 
 static void ft_putmem(void *s, size_t n)
 {
     unsigned char *mem = (unsigned char *)s;
     size_t i = 0;
-    
-    while (i < n)
-    {
+
+    while (i < n) {
         printf("%d ", mem[i]);
         i++;
     }
-    
+
     printf("\n");
 }
 
-static void t_bzero_u(size_t n)
+static void t_calloc_u(size_t n, size_t size)
 {
     void *s;
-    printf("size : %d\n", (int)n);
-    s = malloc(n);
-    printf("ft_bzero : ");
-    ft_putmem(ft_bzero(s, n), n);
+    printf("size: %d, element size: %d\n", (int)n, (int)size);
+    s = ft_calloc(n, size);
+    printf("ft_calloc: ");
+    ft_putmem(s, n * size);
     free(s);
-    s = malloc(n);
-    printf("   bzero : ");
-    ft_putmem(memset(s, 0, n), n);
+    s = calloc(n, size);
+    printf("   calloc: ");
+    ft_putmem(s, n * size);
     free(s);
+
     printf("\n");
 }
 
-void t_bzero(void)
+void t_calloc(void)
 {
-    printf("\n--------------------\ntesting ft_bzero:\n");
-    t_bzero_u(3);
-    t_bzero_u(1);
-    t_bzero_u(0);
-    t_bzero_u(5);
-    t_bzero_u(125);
+    printf("\n--------------------\ntesting ft_calloc :\n");
+    t_calloc_u(3, sizeof(int));
+    t_calloc_u(1, sizeof(double));
+    t_calloc_u(0, sizeof(char));
+    t_calloc_u(5, sizeof(float));
+    t_calloc_u(125, sizeof(short));
+    t_calloc_u(0, sizeof(int));
+    t_calloc_u(5, sizeof(char));
 }
