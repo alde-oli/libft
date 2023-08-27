@@ -33,8 +33,3 @@ void t_itoa(void) {
 
     // Ne pas inclure le cas t_itoa_u(NULL, NULL) ici
 }
-
-int main()
-{
-    t_itoa();
-}

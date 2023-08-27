@@ -35,7 +35,7 @@ void t_putchar_fd(void)
     t_putchar_fd_u('o', STDOUT_FILENO);
 
     // Print to a file
-    int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    int fd = open("PutcharFdOutput.txt", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
     t_putchar_fd_u('W', fd);
     t_putchar_fd_u('r', fd);
     t_putchar_fd_u('i', fd);
@@ -47,9 +47,4 @@ void t_putchar_fd(void)
 
     // Edge case: Negative file descriptor
     t_putchar_fd_u('X', -1);
-}
-
-int main()
-{
-    t_putchar_fd();
 }

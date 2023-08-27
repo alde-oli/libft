@@ -31,8 +31,3 @@ void t_striteri(void)
     t_striteri_u(str4);
     t_striteri_u(NULL);
 }
-
-int main()
-{
-    t_striteri();
-}

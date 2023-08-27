@@ -38,8 +38,3 @@ void t_strmapi(void) {
     // Edge case: NULL source
     t_strmapi_u(NULL);
 }
-
-int main()
-{
-    t_strmapi();
-}
