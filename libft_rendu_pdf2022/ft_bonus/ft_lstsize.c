@@ -3,17 +3,24 @@
 int ft_lstsize(t_list *lst)
 {
     int lstnb;
+    t_list *slow = lst;
+    t_list *fast = lst;
 
     lstnb = 0;
-    if (lst)
+    slow = lst;
+    fast = lst;
+    while (fast && fast->next)
     {
-        while (lst)
-        {
-            lstnb++;
-            lst = lst->next;
-        }
-        return(lstnb);
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+            return (0); // Loop detected, return 0
     }
-    else
-        return (0);
+    while (lst)
+    {
+        lstnb++;
+        lst = lst->next;
+    }
+    return (lstnb);
 }

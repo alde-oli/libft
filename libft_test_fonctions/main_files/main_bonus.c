@@ -2,9 +2,9 @@
 
 int main()
 {
-    t_lst_new();
-    t_lst_add_front();
-	t_lstsizer();
+    t_lstnew();
+    t_lstadd_front();
+	t_lstsize();
 	t_lstlast();
 	t_lstadd_back();
 	t_lstdelone();

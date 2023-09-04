@@ -38,9 +38,9 @@ SUPP_TEST_FILES = ./main_files/main_supp.c \
 											./test_supp/t_putnbr_fd.c
 
 BONUS_TEST_FILES = ./main_files/main_bonus.c \
-											./test_bonus/t_lst_new.c \
-											./test_bonus/t_lst_add_front.C \
-											./test_bonus/t_lstsizer.C \
+											./test_bonus/t_lstnew.c \
+											./test_bonus/t_lstadd_front.C \
+											./test_bonus/t_lstsize.C \
 											./test_bonus/t_lstlast.c \
 											./test_bonus/t_lstadd_back.c \
 											./test_bonus/t_lstdelone.c \
@@ -49,13 +49,13 @@ BONUS_TEST_FILES = ./main_files/main_bonus.c \
 											./test_bonus/t_lstmap.c
 
 libc: $(LIBC_TEST_FILES)
-	gcc -o ltest $(LIBC_TEST_FILES) $(LIBFT_FILE) && exe_ltest
+	gcc -o ltest $(LIBC_TEST_FILES) $(LIBFT_FILE) && ltest
 
 supp: $(SUPP_TEST_FILES)
-	gcc -o stest $(SUPP_TEST_FILES) $(LIBFT_FILE) && exe_stest
+	gcc -o stest $(SUPP_TEST_FILES) $(LIBFT_FILE) && stest
 
 bonus: $(BONUS_TEST_FILES)
-	gcc -o btest $(BONUS_TEST_FILES) $(LIBFT_FILE) && exe_btest
+	gcc -o btest $(BONUS_TEST_FILES) $(LIBFT_FILE) && btest
 
 .PHONY: clean
 
