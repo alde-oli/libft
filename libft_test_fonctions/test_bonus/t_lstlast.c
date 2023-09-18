@@ -5,13 +5,40 @@ void    t_lstlast_u(t_list *lst)
     t_list  *temp = lst;
 
     printf("list:\n");
-    while(temp)
+    if(temp)
     {
-        printf("element adress: %p, content: %s, next: %p\n", temp, temp->content, temp->next);
-        temp = temp->next; 
+        while(temp)
+        {
+            printf("Element address: %p, Content: ", temp);
+            if (!temp || !temp->content)
+                printf("(null), Next: ");
+            else
+                printf("%s, Next: ", (char *)temp->content);
+            if (!temp || !temp->next)
+                printf("(null)\n");
+            else
+                printf("%p\n", temp->next);
+            temp = temp->next; 
+        }
     }
+    else
+        printf("(null)\n");
     t_list *last = ft_lstlast(lst);
-    printf("   last adress: %p, content: %s, next: %p\n\n", last, last->content, last->next);
+    printf("last:\n");
+    if(last)
+    {
+        printf("Element address: %p, Content: ", last);
+        if (!last || !last->content)
+            printf("(null), Next: ");
+        else
+            printf("%s, Next: ", (char *)last->content);
+        if (!last || !last->next)
+            printf("(null)\n\n");
+        else
+            printf("%p\n\n", last->next); 
+    }
+    else
+        printf("(null)\n\n");
 }
 
 void    t_lstlast(void)

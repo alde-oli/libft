@@ -82,7 +82,7 @@ void    t_lstmap_u(t_list *lst, void *(*f)(void *))
 
 void t_lstmap(void)
 {
-    printf("\n--------------------\ntesting ft_lstiter:\n");
+    printf("\n--------------------\ntesting ft_lstmap:\n");
 
     t_list *lst1 = ft_lstnew(strdup("(--1--)"));
     t_list *lst2 = ft_lstnew(strdup("(--2--)"));
