@@ -18,7 +18,7 @@ static int  ft_nbrlen(int n)
 char    *ft_itoa(int n)
 {
     char    *dest;
-    int     i;
+    size_t     i;
 
     i = ft_nbrlen(n);
     dest = (char *) malloc(sizeof(char) * (i + 1));
