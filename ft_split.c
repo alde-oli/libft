@@ -12,15 +12,17 @@
 
 #include "libft.h"
 
-static int	ft_strnbr(char *s, char c)
+static int	ft_strnbr(char const *s, char c)
 {
 	int	s_nbr;
-	int	i;
 
-	i = 0;
-	s_nbr =  1 * (*s != c);
+	s_nbr = 0;
 	while (*s)
-		s_nbr += (*s == c && *(s + 1) != c && *(++s));
+	{
+		if (*s != c && (*(s + 1) == c || !*(s + 1)))
+			s_nbr++;
+		s++;
+	}
 	return (s_nbr);
 }
 
